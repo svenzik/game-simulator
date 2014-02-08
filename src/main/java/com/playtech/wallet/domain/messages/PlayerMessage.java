@@ -15,17 +15,16 @@ import java.math.BigDecimal;
 
 
 /**
- * <p>Java class for walletChangeMessage complex type.
+ * <p>Java class for playerMessage complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="walletChangeMessage">
+ * &lt;complexType name="playerMessage">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="balanceChange" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
- *         &lt;element name="transactionId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="balance" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
  *         &lt;element name="username" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -36,63 +35,37 @@ import java.math.BigDecimal;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "walletChangeMessage", propOrder = {
-    "balanceChange",
-    "transactionId",
+@XmlType(name = "playerMessage", propOrder = {
+    "balance",
     "username"
 })
-public class WalletChangeMessage {
+public class PlayerMessage {
 
-    protected BigDecimal balanceChange;
-    protected String transactionId;
+    protected BigDecimal balance;
     protected String username;
 
     /**
-     * Gets the value of the balanceChange property.
+     * Gets the value of the balance property.
      * 
      * @return
      *     possible object is
      *     {@link java.math.BigDecimal }
      *
      */
-    public BigDecimal getBalanceChange() {
-        return balanceChange;
+    public BigDecimal getBalance() {
+        return balance;
     }
 
     /**
-     * Sets the value of the balanceChange property.
+     * Sets the value of the balance property.
      *
      * @param value
      *     allowed object is
      *     {@link java.math.BigDecimal }
      *     
      */
-    public void setBalanceChange(BigDecimal value) {
-        this.balanceChange = value;
-    }
-
-    /**
-     * Gets the value of the transactionId property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getTransactionId() {
-        return transactionId;
-    }
-
-    /**
-     * Sets the value of the transactionId property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setTransactionId(String value) {
-        this.transactionId = value;
+    public void setBalance(BigDecimal value) {
+        this.balance = value;
     }
 
     /**

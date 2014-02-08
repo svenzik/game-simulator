@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="player" type="playerMessage"/>
+
+  <xs:element name="walletChangeMessage" type="walletChangeMessage"/>
+
+  <xs:element name="walletChangeResult" type="walletChangeResult"/>
+
+  <xs:complexType name="walletChangeResult">
+    <xs:sequence>
+      <xs:element name="balanceChange" type="xs:decimal" minOccurs="0"/>
+      <xs:element name="balanceVersion" type="xs:long" minOccurs="0"/>
+      <xs:element name="errorCode" type="walletChangeResultStatus" minOccurs="0"/>
+      <xs:element name="totalBalance" type="xs:decimal" minOccurs="0"/>
+      <xs:element name="transactionId" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="playerMessage">
+    <xs:sequence>
+      <xs:element name="balance" type="xs:decimal" minOccurs="0"/>
+      <xs:element name="username" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="walletChangeMessage">
+    <xs:sequence>
+      <xs:element name="balanceChange" type="xs:decimal" minOccurs="0"/>
+      <xs:element name="transactionId" type="xs:string" minOccurs="0"/>
+      <xs:element name="username" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="walletChangeResultStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OK"/>
+      <xs:enumeration value="NO_SUCH_PLAYER"/>
+      <xs:enumeration value="PLAYER_BALANCE_LESS_THAN_ZERO"/>
+      <xs:enumeration value="REPEATING_TRANSACTION"/>
+      <xs:enumeration value="OPTIMISTIC_LOCKING_EXCEPTION"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
+
