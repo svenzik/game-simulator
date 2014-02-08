@@ -14,12 +14,9 @@ import java.util.List;
 
 public class WalletServiceJsonClient implements WalletServiceClient {
 
-    public WalletServiceJsonClient() {
-        this("http://localhost:8080/wallet/wallet");
-    }
 
     public WalletServiceJsonClient(String baseURI) {
-        this.baseURI = baseURI;
+        this.baseURI = baseURI+"/wallet/";
         //set json support for rest restTemplate
         List<HttpMessageConverter<?>> list = new ArrayList<HttpMessageConverter<?>>();
         list.add(new MappingJackson2HttpMessageConverter());

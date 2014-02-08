@@ -2,9 +2,9 @@ package com.playtech.gamesimulator;
 
 import com.playtech.gamesimulator.service.WalletServiceClient;
 import com.playtech.gamesimulator.service.WalletServiceJsonClient;
-import com.playtech.wallet.domain.messages.WalletChangeMessage;
-import com.playtech.wallet.domain.messages.WalletChangeResult;
-import com.playtech.wallet.domain.messages.WalletChangeResultStatus;
+import com.playtech.wallet.domain.messages.*;
+import org.springframework.web.client.RestClientException;
+import org.springframework.web.client.RestTemplate;
 
 import java.math.BigDecimal;
 import java.util.Queue;
@@ -28,30 +28,48 @@ public class GameSimulator {
     //
     public static void main(String[] args) throws Exception {
 
-        int threads = 20;
-
-        String username = "sven";
+        String username = GameSimulatorProperties.get("username");
         if (args.length > 0) {
             username = args[0];
         }
 
-        System.out.println("This is very simple way of simulating server requests.");
+        System.out.println("This is just a example of simulating server requests.");
         System.out.println("Using username: " + username);
 
+        System.out.println("For test user convenience, creating player in server: " + username);
+        createAndForget(username);
 
-        WalletServiceClient walletServer = new WalletServiceJsonClient();
+        WalletServiceClient walletServer = new WalletServiceJsonClient(GameSimulatorProperties.get("walletServiceUrl"));
 
         //for testing: just to get start state, we will add 0 to user account
         WalletChangeResult walletStartState = walletServer.sendMessage(createServerMessage(username, 0));
 
         //run multiple simultaneous requests
-        createMultipleRequests(username, threads);
+        createMultipleRequests(username, walletServer, 20);
 
         WalletChangeResult walletEndState = walletServer.sendMessage(createServerMessage(username, 0));
 
         verifyResultsAndPrint(walletStartState, walletEndState);
 
         checkAndPrintExceptions(exceptionList);
+    }
+
+    /**
+     * creates user, if it exists then error is ignored
+     * @param username
+     */
+    private static void createAndForget(String username) {
+        RestTemplate restTemplate = new RestTemplate();
+        String url = GameSimulatorProperties.get("walletServiceUrl")+"/player";
+
+        PlayerMessage message = new PlayerMessage();
+        message.setUsername(username);
+
+        try {
+            restTemplate.postForObject(url, message, PlayerMessage.class);
+        } catch (RestClientException e){
+//            e.printStackTrace();
+        }
     }
 
     private static void checkAndPrintExceptions(Queue<Exception> exceptionList) {
@@ -91,10 +109,13 @@ public class GameSimulator {
         }
     }
 
-    private static void createMultipleRequests(String usename, int threadCount) throws Exception {
+    private static void createMultipleRequests(String usename,
+                                               WalletServiceClient walletServer,
+                                               int threadCount) throws Exception {
+
         ExecutorService taskExecutor = Executors.newFixedThreadPool(threadCount);
         for (int i = 0; i < threadCount; i++) {
-            taskExecutor.execute(new BalanceUpdater(usename));
+            taskExecutor.execute(new BalanceUpdater(usename, walletServer));
         }
 
         taskExecutor.shutdown();
@@ -104,6 +125,7 @@ public class GameSimulator {
         } catch (InterruptedException e) {
             throw new Exception("Test failed to end in time", e);
         }
+        System.out.println(" FINISHED ");
     }
 
     private static WalletChangeMessage createServerMessage(final String username, final int balanceChange) {
@@ -118,13 +140,14 @@ public class GameSimulator {
 
     private static class BalanceUpdater implements Runnable {
 
-        private BalanceUpdater(String playerUsername) {
+        private BalanceUpdater(String playerUsername, WalletServiceClient walletServer) {
             this.playerUsername = playerUsername;
+            this.walletServer = walletServer;
         }
 
         private String playerUsername;
 
-        private WalletServiceClient walletServer = new WalletServiceJsonClient();
+        private WalletServiceClient walletServer;
 
         @Override
         public void run() {
@@ -148,6 +171,9 @@ public class GameSimulator {
 
                 try {
 
+                    if (i % 100 == 0) {
+                        System.out.print(".");
+                    }
                     while (true) {
                         WalletChangeResult result = walletServer.sendMessage(message);
                         if (result.getErrorCode().equals(WalletChangeResultStatus.OK)) {
