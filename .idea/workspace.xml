@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5c668282-3c03-45c3-94db-bd941f89d28b" name="Default" comment="" />
+    <list default="true" id="5c668282-3c03-45c3-94db-bd941f89d28b" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/playtech/gamesimulator/GameSimulator$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/playtech/gamesimulator/GameSimulator$BalanceUpdater.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/playtech/gamesimulator/GameSimulator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/playtech/gamesimulator/service/WalletServiceClient.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/playtech/gamesimulator/service/WalletServiceException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/playtech/gamesimulator/service/WalletServiceJsonClient.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/playtech/wallet/domain/messages/WalletChangeMessage.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/playtech/wallet/domain/messages/WalletChangeResult.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/playtech/wallet/domain/messages/WalletChangeResultStatus.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/playtech/gamesimulator/GameSimulator.java" afterPath="$PROJECT_DIR$/src/main/java/com/playtech/gamesimulator/GameSimulator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game-simulator.iml" afterPath="$PROJECT_DIR$/game-simulator.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+    </list>
     <ignored path="game-simulator.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -64,19 +80,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file leaf-file-name="WalletChangeMessage.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/playtech/wallet/domain/messages/WalletChangeMessage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="47" selection-start="493" selection-end="493" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="585">
+            <state line="93" column="16" selection-start="2582" selection-end="2582" vertical-scroll-proportion="0.0" vertical-offset="853" max-vertical-offset="1650">
+              <folding>
+                <element signature="e#2613#2614#0" expanded="true" />
+                <element signature="e#2655#2656#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WalletChangeResult.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/playtech/wallet/domain/messages/WalletChangeResult.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="54" column="37" selection-start="1973" selection-end="1973" vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="2310">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameSimulator.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="GameSimulator.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/playtech/gamesimulator/GameSimulator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="91" column="5" selection-start="3613" selection-end="3613" vertical-scroll-proportion="2.4962778" vertical-offset="359" max-vertical-offset="2820">
+            <state line="109" column="0" selection-start="4268" selection-end="4268" vertical-scroll-proportion="0.0" vertical-offset="1444" max-vertical-offset="2805">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#815#826#0" expanded="true" />
@@ -106,6 +134,24 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="61" column="68" selection-start="2180" selection-end="2180" vertical-scroll-proportion="0.0" vertical-offset="675" max-vertical-offset="1830">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="60" selection-start="32" selection-end="91" vertical-scroll-proportion="0.12820514" vertical-offset="0" max-vertical-offset="345">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -113,14 +159,24 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/src/main/java/messages/WalletChangeResultStatus.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/playtech/gamesimulator/service/WalletServiceClient.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/playtech/gamesimulator/service/WalletServiceException.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/playtech/gamesimulator/service/WalletServiceJsonClient.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/playtech/wallet/domain/messages/WalletChangeMessage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/playtech/wallet/domain/messages/WalletChangeResult.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/playtech/gamesimulator/GameSimulator.java" />
       </list>
     </option>
@@ -138,7 +194,7 @@
     <option name="width" value="1303" />
     <option name="height" value="773" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -198,6 +254,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="game-simulator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="game-simulator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xsd" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -340,10 +418,15 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/playtech/wallet/domain/messages" />
       <recent name="$PROJECT_DIR$/src/main/java" />
     </key>
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="com.playtech.gamesimulator.service" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.playtech.wallet.domain.messages" />
     </key>
   </component>
   <component name="RunManager" selected="Application.GameSimulator">
@@ -599,19 +682,32 @@
       <changelist id="5c668282-3c03-45c3-94db-bd941f89d28b" name="Default" comment="" />
       <created>1391756369168</created>
       <updated>1391756369168</updated>
-      <workItem from="1391756377409" duration="15240000" />
+      <workItem from="1391756377409" duration="21534000" />
     </task>
+    <task id="LOCAL-00001" summary="XSD support for generating java classes&#10;">
+      <created>1391858099512</created>
+      <updated>1391858099512</updated>
+    </task>
+    <task id="LOCAL-00002" summary="added forgotten .git">
+      <created>1391858110904</created>
+      <updated>1391858110904</updated>
+    </task>
+    <task id="LOCAL-00003" summary="added forgotten .gitignore&#10;">
+      <created>1391858147412</created>
+      <updated>1391858147412</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15240000" />
+    <option name="totallyTimeSpent" value="21534000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-4" width="1303" height="773" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.72302735" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -630,8 +726,8 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22310758" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30273753" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31474105" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23349437" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -650,6 +746,10 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="XSD support for generating java classes&#10;" />
+    <MESSAGE value="added forgotten .git" />
+    <MESSAGE value="added forgotten .gitignore&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="added forgotten .gitignore&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -687,13 +787,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="47" selection-start="493" selection-end="493" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="585">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/playtech/gamesimulator/service/WalletServiceJsonClient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="43" column="124" selection-start="1695" selection-end="1695" vertical-scroll-proportion="0.0" vertical-offset="339" max-vertical-offset="1080">
@@ -718,13 +811,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/playtech/wallet/domain/messages/WalletChangeMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="93" column="16" selection-start="2582" selection-end="2582" vertical-scroll-proportion="0.0" vertical-offset="853" max-vertical-offset="1650">
+          <folding>
+            <element signature="e#2613#2614#0" expanded="true" />
+            <element signature="e#2655#2656#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/playtech/wallet/domain/messages/WalletChangeResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="37" selection-start="1973" selection-end="1973" vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="2310">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/playtech/gamesimulator/GameSimulator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="5" selection-start="3613" selection-end="3613" vertical-scroll-proportion="2.4962778" vertical-offset="359" max-vertical-offset="2820">
+        <state line="109" column="0" selection-start="4268" selection-end="4268" vertical-scroll-proportion="0.0" vertical-offset="1444" max-vertical-offset="2805">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#815#826#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="68" selection-start="2180" selection-end="2180" vertical-scroll-proportion="0.0" vertical-offset="675" max-vertical-offset="1830">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="60" selection-start="32" selection-end="91" vertical-scroll-proportion="0.12820514" vertical-offset="0" max-vertical-offset="345">
+          <folding />
         </state>
       </provider>
     </entry>

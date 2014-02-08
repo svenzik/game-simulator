@@ -25,6 +25,9 @@
         <module name="game-simulator" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="game-simulator" target="1.6" />
+    </bytecodeTargetLevel>
   </component>
 </project>
 

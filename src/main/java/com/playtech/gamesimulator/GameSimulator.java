@@ -107,11 +107,10 @@ public class GameSimulator {
     }
 
     private static WalletChangeMessage createServerMessage(final String username, final int balanceChange) {
-        UUID transactionId = UUID.randomUUID();
         WalletChangeMessage message = new WalletChangeMessage();
 
         message.setUsername(username);
-        message.setTransactionId(transactionId);
+        message.setTransactionId(UUID.randomUUID().toString());
         message.setBalanceChange(BigDecimal.valueOf(balanceChange));
 
         return message;
@@ -141,11 +140,11 @@ public class GameSimulator {
 
                 //test repeating transaction id-s
                 if (Math.random() > 0.999) {
-                    message.setTransactionId(UUID.fromString("ebaa4232-b1b3-42a1-8191-d4fae925947e"));
+                    message.setTransactionId(("ebaa4232-b1b3-42a1-8191-d4fae925947e"));
                 }
 
 
-                UUID transactionId = message.getTransactionId();
+                String transactionId = message.getTransactionId();
 
                 try {
 
