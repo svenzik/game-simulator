@@ -45,7 +45,7 @@
                 </configuration>
             </plugin>
 
-            <!--XSD generation-->
+            <!--sources from XSD generation-->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>jaxb2-maven-plugin</artifactId>
@@ -59,8 +59,25 @@
                     </execution>
                 </executions>
                 <configuration>
+                    <outputDirectory>${project.build.directory}/generated-sources/jaxb</outputDirectory>
                     <schemaDirectory>${project.basedir}/src/main/xsd</schemaDirectory>
                     <packageName>com.playtech.wallet.domain.messages</packageName>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.2.1</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <mainClass>com.playtech.gamesimulator.GameSimulator</mainClass>
                 </configuration>
             </plugin>
 
