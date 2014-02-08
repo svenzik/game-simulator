@@ -1,0 +1,17 @@
+#to remove ignored files after
+#git rm --cached `git ls-files -i --exclude-from=.gitignore`
+
+/target
+/logs
+*.log
+
+#IntelliJ IDEA project format (.ipr file based or .idea directory based)
+#1) .ipr file based - share the project .ipr file and and all the .iml module files, 
+#don't share the .iws file as it stores user specific settings.
+#2) .idea directory based - share all the files under .idea directory in the project root 
+#except the workspace.xml and tasks.xml files which store user specific settings, 
+#also share all the .iml module files.
+
+.idea/workspace.xml
+.idea/tasks.xml
+
