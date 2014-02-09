@@ -56,7 +56,7 @@ public class GameSimulator {
 
     /**
      * creates user, if it exists then error is ignored
-     * @param username
+     * @param username username to create
      */
     private static void createAndForget(String username) {
         RestTemplate restTemplate = new RestTemplate();
@@ -121,7 +121,7 @@ public class GameSimulator {
         taskExecutor.shutdown();
 
         try {
-            taskExecutor.awaitTermination(120L, TimeUnit.SECONDS);
+            taskExecutor.awaitTermination(600L, TimeUnit.SECONDS);
         } catch (InterruptedException e) {
             throw new Exception("Test failed to end in time", e);
         }
@@ -166,8 +166,6 @@ public class GameSimulator {
                     message.setTransactionId(("ebaa4232-b1b3-42a1-8191-d4fae925947e"));
                 }
 
-
-                String transactionId = message.getTransactionId();
 
                 try {
 
